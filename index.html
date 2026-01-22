@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prashant Sharma — Portfolio</title>
+    <meta
+      name="description"
+      content="Minimal portfolio website showcasing projects, skills, and contact."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="dot"></span> Prashant Sharma
+        </a>
+
+        <nav class="links" aria-label="Primary">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+          
+        </nav>
+
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div>
+            <p class="kicker">Third-year Engineering Student • CS</p>
+
+            <h1>
+              I build <span class="accent">clean</span> web apps and Practical
+              <span class="accent">Problem Driven</span> projects.
+            </h1>
+
+            <p class="subtitle">
+              I’m Prashant Sharma. I like building practical projects—web development,
+              ML basics, and automation.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn" href="#projects">View Projects</a>
+              <a class="btn ghost" href="#contact">Let’s talk</a>
+              <button class="btn ghost" id="copyLinkBtn" type="button">Copy site link</button>
+            </div>
+
+            <div class="mini">
+              <span>📍 India</span>
+              <span>•</span>
+              <a id="resumeLink" href="./assets/resume.pdf" target="_blank" rel="noreferrer" download>
+                Resume
+              </a>
+              <span>•</span>
+              <a id="githubLink" href="https://github.com/ThatGUY12034" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+              <span>•</span>
+              <a
+                id="linkedinLink"
+                href="https://www.linkedin.com/in/prashant-sharma-184b513a5/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <div class="card hero-card">
+            <div class="avatar">PS</div>
+            <div class="card-body">
+              <p class="muted">Currently exploring</p>
+              <ul class="bullets">
+                <li>Java Development</li>
+                <li>AI & ML</li>
+                <li>Prompt Engineering</li>
+              </ul>
+
+              <div class="stats">
+                <div>
+                  <div class="stat-num" id="projectCount">0</div>
+                  <div class="stat-label">Projects</div>
+                </div>
+                <div>
+                  <div class="stat-num">3rd</div>
+                  <div class="stat-label">Year</div>
+                </div>
+                <div>
+                  <div class="stat-num">Open</div>
+                  <div class="stat-label">to Internships</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-head">
+            <h2>Projects</h2>
+            <p class="muted">Selected work. More coming soon.</p>
+          </div>
+
+          <!-- IMPORTANT: script.js needs this -->
+          <div class="grid" id="projectsGrid"></div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-head">
+            <h2>Skills</h2>
+            <p class="muted">Tools & technologies I use.</p>
+          </div>
+
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Python</span>
+            <span class="chip">Java</span>
+            <span class="chip">C</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Firebase</span>
+            <span class="chip">Flask</span>
+            <span class="chip">Git</span>
+            <span class="chip">React</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">React Native</span>
+            <span class="chip">Machine Learning</span>
+          </div>
+        </div>
+      </section>
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certifications">
+    <div class="container">
+        <div class="section-head">
+        <h2>Certifications</h2>
+        <p class="muted">Learning credentials and coursework.</p>
+        </div>
+
+        <div class="grid two">
+        <article class="card cert-card">
+            <div class="card-body">
+            <h3>The Complete Full Stack Web Development Bootcamp</h3>
+            <p class="cert-meta">Udemy</p>
+            <p class="cert-meta small">Completed • 2025</p>
+            </div>
+        </article>
+
+        <!-- Future certifications go here -->
+        <!--
+        <article class="card cert-card">
+            <div class="card-body">
+            <h3>Advanced Machine Learning</h3>
+            <p class="cert-meta">Coursera</p>
+            <p class="cert-meta small">In Progress</p>
+            </div>
+        </article>
+        -->
+        </div>
+    </div>
+    </section>
+
+
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="container two-col">
+          <div>
+            <h2>About</h2>
+            <p class="muted">
+              Motivated Computer Engineering undergraduate with strong fundamentals in programming,
+              software development, and real-world project experience. Quick learner with hands-on
+              experience in building full-stack applications, automation tools, and dashboards.
+            </p>
+            <p class="muted">
+              I am actively seeking an internship to grow technical skills and contribute to impactful solutions.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">What I’m looking for</h3>
+              <ul class="bullets">
+                <li>Internships (Software / Web / Data)</li>
+                <li>Hackathons & team projects</li>
+                <li>Open-source contributions</li>
+              </ul>
+              <div class="divider"></div>
+              <p class="muted small">Open to collaboration and learning fast.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+        <section class="section" id="education">
+        <div class="container">
+            <div class="section-head">
+            <h2>Education</h2>
+            </div>
+
+            <article class="card edu-card">
+            <div class="card-body">
+                <h3>B.Tech in Computer Engineering</h3>
+                <p class="edu-meta">Terna Engineering College, Navi Mumbai</p>
+                <p class="edu-meta small">2023 – 2027 • Currently in 3rd Year</p>
+            </div>
+            </article>
+
+        </div>
+        </section>
+
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-head">
+            <h2>Contact</h2>
+            <p class="muted">Fastest way to reach me.</p>
+          </div>
+
+          <div class="contact-card card">
+            <div class="card-body contact-grid">
+              <!-- EMAIL -->
+              <div>
+                <p class="muted small">Email</p>
+                <a
+                  class="contact-link icon-link"
+                  id="emailLink"
+                  href="#"
+                  data-user="prashantsharmaa1204"
+                  data-domain="gmail.com"
+                >
+                  <!-- Gmail-style icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#EA4335" d="M12 13.5L2 6.75V18c0 .83.67 1.5 1.5 1.5H7V11.25L12 13.5z"/>
+                    <path fill="#34A853" d="M12 13.5l5-2.25V19.5h3.5c.83 0 1.5-.67 1.5-1.5V6.75L12 13.5z"/>
+                    <path fill="#4A90E2" d="M12 12l10-7.5V6.75L12 13.5 2 6.75V4.5L12 12z"/>
+                    <path fill="#FBBC04" d="M2 4.5l10 7.5 10-7.5L12 1.5 2 4.5z"/>
+                  </svg>
+                  <span id="emailText"></span>
+                </a>
+              </div>
+
+              <!-- WHATSAPP -->
+              <div>
+                <p class="muted small">WhatsApp</p>
+                <a
+                  class="contact-link icon-link"
+                  id="waInline"
+                  href="#"
+                  data-wa="917876062814"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <!-- WhatsApp-style icon -->
+                  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#25D366" d="M20.5 3.5A11 11 0 003.1 17.8L2 22l4.3-1.1A11 11 0 1020.5 3.5z"/>
+                    <path fill="#fff" d="M17.3 14.4c-.3-.2-1.7-.8-2-1s-.5-.2-.7.1-.8 1-.9 1.1-.3.2-.6.1a8.8 8.8 0 01-2.6-1.6 9.6 9.6 0 01-1.8-2.2c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 3s1.2 3.6 1.3 3.8a13 13 0 005 5c.7.3 1.2.5 1.6.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.4z"/>
+                  </svg>
+                  <span>+91XXXXXXXXXX</span>
+                </a>
+              </div>
+
+              <!-- ACTION BUTTONS -->
+              <div class="contact-actions">
+                <a class="btn" id="gmailBtn" href="#" target="_blank" rel="noreferrer">Send Email</a>
+                <a class="btn ghost" id="waBtn" href="#" target="_blank" rel="noreferrer">WhatsApp Me</a>
+                <a class="btn ghost" href="#top">Back to top</a>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <p class="muted small">
+              © <span id="year"></span> Prashant Sharma • Built with Passion
+            </p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a class="fab" id="waFab" href="#" data-wa="917876062814" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#25D366" d="M20.5 3.5A11 11 0 003.1 17.8L2 22l4.3-1.1A11 11 0 1020.5 3.5z"/>
+        <path fill="#fff" d="M17.3 14.4c-.3-.2-1.7-.8-2-1s-.5-.2-.7.1-.8 1-.9 1.1-.3.2-.6.1a8.8 8.8 0 01-2.6-1.6 9.6 9.6 0 01-1.8-2.2c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 3s1.2 3.6 1.3 3.8a13 13 0 005 5c.7.3 1.2.5 1.6.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.4z"/>
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
+
+    <!-- Wiring email + WhatsApp (keeps spam protection) -->
+    <script>
+      (function () {
+        // Email
+        const emailLink = document.getElementById("emailLink");
+        const emailText = document.getElementById("emailText");
+        const gmailBtn = document.getElementById("gmailBtn");
+        if (emailLink && emailText && gmailBtn) {
+          const email = emailLink.dataset.user + "@" + emailLink.dataset.domain;
+          emailText.textContent = email;
+          emailLink.href = "mailto:" + email;
+          gmailBtn.href =
+            "https://mail.google.com/mail/?view=cm&fs=1&to=" +
+            encodeURIComponent(email) +
+            "&su=" +
+            encodeURIComponent("Internship Inquiry");
+        }
+
+        // WhatsApp
+        const waInline = document.getElementById("waInline");
+        const waText = document.getElementById("waText");
+        const waBtn = document.getElementById("waBtn");
+        const waFab = document.getElementById("waFab");
+
+        const waNumber = waInline?.dataset?.wa || waFab?.dataset?.wa || "";
+        if (waNumber) {
+          // format: +91 78760 62814
+          if (waText) waText.textContent = "+91 " + waNumber.slice(2, 7) + " " + waNumber.slice(7);
+
+          const waUrl =
+            "https://wa.me/" +
+            waNumber +
+            "?text=" +
+            encodeURIComponent("Hi Prashant, I came across your portfolio and would like to connect.");
+
+          if (waInline) waInline.href = waUrl;
+          if (waBtn) waBtn.href = waUrl;
+          if (waFab) waFab.href = waUrl;
+        }
+      })();
+    </script>
+  </body>
+</html>
