@@ -1,4 +1,12 @@
 const projects = [
+   {
+    title:
+      "CtrlAI ",
+    desc: "AI SaaS Platform Full-stack AI application with authentication, premium features, image processing, resume analysis, and community interactions. Deployed on Vercel.",
+    tags: ["ReactJS", "NodeJS", "Postgres","Clerk"],
+    code: "https://github.com/ThatGUY12034/CtrlAI",
+    live: "https://ctrl-ai-alpha.vercel.app/"
+  },
   {
     title:
       "Ground Water Monitoring & Predictive Analytics System | Smart India Hackathon 2025 (Waitlist Finalist)",
