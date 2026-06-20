@@ -1,0 +1,33 @@
+{
+  "_README": {
+    "how_to_add": "Add or remove strings in the 'skills' array, then commit & push. Order is the display order.",
+    "template": "New Skill"
+  },
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "Python",
+    "JavaScript",
+    "C",
+    "SQL",
+    "React",
+    "Next.js",
+    "React Native",
+    "Node.js",
+    "Express.js",
+    "Flask",
+    "REST APIs",
+    "Microservices",
+    "MongoDB",
+    "PostgreSQL",
+    "MySQL",
+    "Redis",
+    "Firebase",
+    "Docker",
+    "Git / GitHub",
+    "Vercel",
+    "Gemini API",
+    "NLP (Stanza)",
+    "Machine Learning"
+  ]
+}

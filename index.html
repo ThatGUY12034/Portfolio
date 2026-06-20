@@ -6,13 +6,35 @@
     <title>Prashant Sharma — Portfolio</title>
     <meta
       name="description"
-      content="Minimal portfolio website showcasing projects, skills, and contact."
+      content="Prashant Sharma — Computer Engineering student. Portfolio showcasing full-stack, ML, and automation projects."
     />
+    <meta name="theme-color" content="#0b0c10" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Immersive FX layers -->
+    <!-- Full-page ink-reveal background — move the cursor to reveal the art -->
+    <div class="page-ink" aria-hidden="true">
+      <div class="page-ink-bg"></div>
+      <canvas class="page-ink-canvas" id="pageInk"></canvas>
+    </div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
     <header class="header">
       <div class="container nav">
@@ -27,11 +49,31 @@
           <a href="#about">About</a>
           <a href="#education">Education</a>
           <a href="#contact">Contact</a>
-          
         </nav>
 
-        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+          <button
+            class="hamburger"
+            id="navToggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
+
+      <!-- Mobile slide-down nav -->
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <main id="main">
@@ -39,54 +81,82 @@
       <section class="hero" id="top">
         <div class="container hero-grid">
           <div>
-            <p class="kicker">Third-year Engineering Student • CS</p>
+            <p class="kicker"><span class="kicker-bar"></span>Fourth-year Engineering Student • CS</p>
 
             <h1>
-              I build <span class="accent">clean</span> web apps and Practical
+              I build <span class="accent" id="cycleText">clean web apps</span> and Practical
               <span class="accent">Problem Driven</span> projects.
             </h1>
 
             <p class="subtitle">
-              I’m Prashant Sharma. I like building practical projects—web development,
-              ML basics, and automation.
+              I’m Prashant Sharma. Passionate about building practical projects—web
+              development, ML basics, and automation with cutting-edge 3D interactions.
             </p>
 
             <div class="cta-row">
               <a class="btn" href="#projects">View Projects</a>
               <a class="btn ghost" href="#contact">Let’s talk</a>
-              <button class="btn ghost" id="copyLinkBtn" type="button">Copy site link</button>
+              <button class="btn ghost" id="copyLinkBtn" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+                Copy link
+              </button>
             </div>
 
             <div class="mini">
-              <span>📍 India</span>
-              <span>•</span>
-              <a id="resumeLink" href="./assets/resume.pdf" target="_blank" rel="noreferrer" download>
+              <span class="mini-loc">📍 India</span>
+              <span class="mini-sep">•</span>
+              <a class="mini-pill" id="resumeLink" href="./assets/resume.pdf" target="_blank" rel="noreferrer">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
                 Resume
               </a>
-              <span>•</span>
-              <a id="githubLink" href="https://github.com/ThatGUY12034" target="_blank" rel="noreferrer">
+              <span class="mini-sep">•</span>
+              <a class="mini-pill" id="githubLink" href="https://github.com/ThatGUY12034" target="_blank" rel="noreferrer">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/>
+                </svg>
                 GitHub
               </a>
-              <span>•</span>
-              <a
-                id="linkedinLink"
-                href="https://www.linkedin.com/in/prashant-sharma-184b513a5/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <span class="mini-sep">•</span>
+              <a class="mini-pill" id="linkedinLink" href="https://www.linkedin.com/in/prashant-sharma-184b513a5/" target="_blank" rel="noreferrer">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.45 20.45h-3.56v-5.57c0-1.33 0-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+                </svg>
                 LinkedIn
               </a>
             </div>
           </div>
 
-          <div class="card hero-card">
+          <div class="card hero-card" data-reveal>
+            <span class="hero-card-glow" aria-hidden="true"></span>
             <div class="avatar">PS</div>
             <div class="card-body">
-              <p class="muted">Currently exploring</p>
-              <ul class="bullets">
-                <li>Java Development</li>
-                <li>AI & ML</li>
-                <li>Prompt Engineering</li>
+              <p class="muted card-eyebrow">Currently exploring</p>
+              <ul class="bullets explore">
+                <li>
+                  <span class="explore-ico" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  </span>
+                  Java Development
+                </li>
+                <li>
+                  <span class="explore-ico" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04Z"/></svg>
+                  </span>
+                  AI &amp; ML
+                </li>
+                <li>
+                  <span class="explore-ico" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                  </span>
+                  Microservices
+                </li>
               </ul>
 
               <div class="stats">
@@ -95,7 +165,7 @@
                   <div class="stat-label">Projects</div>
                 </div>
                 <div>
-                  <div class="stat-num">3rd</div>
+                  <div class="stat-num">4th</div>
                   <div class="stat-label">Year</div>
                 </div>
                 <div>
@@ -111,8 +181,11 @@
       <!-- PROJECTS -->
       <section class="section" id="projects">
         <div class="container">
-          <div class="section-head">
-            <h2>Projects</h2>
+          <div class="section-head" data-reveal>
+            <div>
+              <span class="eyebrow">Work</span>
+              <h2>Projects</h2>
+            </div>
             <p class="muted">Selected work. More coming soon.</p>
           </div>
 
@@ -124,57 +197,31 @@
       <!-- SKILLS -->
       <section class="section" id="skills">
         <div class="container">
-          <div class="section-head">
-            <h2>Skills</h2>
+          <div class="section-head" data-reveal>
+            <div>
+              <span class="eyebrow">Toolbox</span>
+              <h2>Skills</h2>
+            </div>
             <p class="muted">Tools & technologies I use.</p>
           </div>
 
-          <div class="chips">
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">Python</span>
-            <span class="chip">Java</span>
-            <span class="chip">C</span>
-            <span class="chip">SQL</span>
-            <span class="chip">Firebase</span>
-            <span class="chip">Flask</span>
-            <span class="chip">Git</span>
-            <span class="chip">React</span>
-            <span class="chip">Node.js</span>
-            <span class="chip">React Native</span>
-            <span class="chip">Machine Learning</span>
-          </div>
+          <!-- Populated from data/skills.json by script.js -->
+          <div class="chips" id="skillsGrid" data-reveal></div>
         </div>
       </section>
     <!-- CERTIFICATIONS -->
     <section class="section" id="certifications">
     <div class="container">
-        <div class="section-head">
-        <h2>Certifications</h2>
+        <div class="section-head" data-reveal>
+        <div>
+          <span class="eyebrow">Credentials</span>
+          <h2>Certifications</h2>
+        </div>
         <p class="muted">Learning credentials and coursework.</p>
         </div>
 
-        <div class="grid two">
-        <article class="card cert-card">
-            <div class="card-body">
-            <h3>The Complete Full Stack Web Development Bootcamp</h3>
-            <p class="cert-meta">Udemy</p>
-            <p class="cert-meta small">Completed • 2025</p>
-            </div>
-        </article>
-
-        <!-- Future certifications go here -->
-        <!--
-        <article class="card cert-card">
-            <div class="card-body">
-            <h3>Advanced Machine Learning</h3>
-            <p class="cert-meta">Coursera</p>
-            <p class="cert-meta small">In Progress</p>
-            </div>
-        </article>
-        -->
-        </div>
+        <!-- Populated from data/certifications.json by script.js -->
+        <div class="grid two" id="certsGrid" data-reveal></div>
     </div>
     </section>
 
@@ -183,23 +230,26 @@
       <!-- ABOUT -->
       <section class="section" id="about">
         <div class="container two-col">
-          <div>
+          <div data-reveal>
+            <span class="eyebrow">Profile</span>
             <h2>About</h2>
             <p class="muted">
-              Motivated Computer Engineering undergraduate with strong fundamentals in programming,
-              software development, and real-world project experience. Quick learner with hands-on
-              experience in building full-stack applications, automation tools, and dashboards.
+              Final-year Computer Engineering undergraduate (B.E., 2023–2027) with hands-on
+              experience building full-stack web applications, Android apps, and AI/ML-integrated
+              systems. Proficient across Java/Spring Boot and the MERN stack, with production
+              experience in microservices architecture, REST APIs, and cloud deployment.
             </p>
             <p class="muted">
-              I am actively seeking an internship to grow technical skills and contribute to impactful solutions.
+              Smart India Hackathon 2025 Waitlist Finalist. Seeking a Full Stack / Android Developer
+              internship to apply and grow my technical expertise in a professional engineering environment.
             </p>
           </div>
 
-          <div class="card">
+          <div class="card" data-reveal>
             <div class="card-body">
               <h3 class="card-title">What I’m looking for</h3>
               <ul class="bullets">
-                <li>Internships (Software / Web / Data)</li>
+                <li>Full Stack / Android Developer internships</li>
                 <li>Hackathons & team projects</li>
                 <li>Open-source contributions</li>
               </ul>
@@ -213,15 +263,18 @@
       <!-- EDUCATION -->
         <section class="section" id="education">
         <div class="container">
-            <div class="section-head">
-            <h2>Education</h2>
+            <div class="section-head" data-reveal>
+            <div>
+              <span class="eyebrow">Background</span>
+              <h2>Education</h2>
+            </div>
             </div>
 
-            <article class="card edu-card">
+            <article class="card edu-card" data-reveal>
             <div class="card-body">
-                <h3>B.Tech in Computer Engineering</h3>
-                <p class="edu-meta">Terna Engineering College, Navi Mumbai</p>
-                <p class="edu-meta small">2023 – 2027 • Currently in 3rd Year</p>
+                <h3>Bachelor of Engineering (B.E.) in Computer Engineering</h3>
+                <p class="edu-meta">Terna Engineering College • University of Mumbai</p>
+                <p class="edu-meta small">Mumbai, India • 2023 – 2027 (Expected)</p>
             </div>
             </article>
 
@@ -232,12 +285,15 @@
       <!-- CONTACT -->
       <section class="section" id="contact">
         <div class="container">
-          <div class="section-head">
-            <h2>Contact</h2>
+          <div class="section-head" data-reveal>
+            <div>
+              <span class="eyebrow">Get in touch</span>
+              <h2>Contact</h2>
+            </div>
             <p class="muted">Fastest way to reach me.</p>
           </div>
 
-          <div class="contact-card card">
+          <div class="contact-card card" data-reveal>
             <div class="card-body contact-grid">
               <!-- EMAIL -->
               <div>
@@ -276,7 +332,7 @@
                     <path fill="#25D366" d="M20.5 3.5A11 11 0 003.1 17.8L2 22l4.3-1.1A11 11 0 1020.5 3.5z"/>
                     <path fill="#fff" d="M17.3 14.4c-.3-.2-1.7-.8-2-1s-.5-.2-.7.1-.8 1-.9 1.1-.3.2-.6.1a8.8 8.8 0 01-2.6-1.6 9.6 9.6 0 01-1.8-2.2c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 3s1.2 3.6 1.3 3.8a13 13 0 005 5c.7.3 1.2.5 1.6.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.4z"/>
                   </svg>
-                  <span>+91XXXXXXXXXX</span>
+                  <span id="waText">+91 78760 62814</span>
                 </a>
               </div>
 

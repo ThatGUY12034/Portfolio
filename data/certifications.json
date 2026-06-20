@@ -1,0 +1,58 @@
+{
+  "_README": {
+    "how_to_add": "Copy one object from the 'certifications' list, paste it as a new entry, fill in the fields, then commit & push. Newest first looks best.",
+    "fields": {
+      "title": "Required. Certification / course name.",
+      "issuer": "Required. Provider, e.g. Udemy, Coursera.",
+      "status": "Optional. e.g. \"Completed\", \"In Progress\".",
+      "year": "Optional. Year string, e.g. \"2025\".",
+      "url": "Optional. Online verification link (must start with http).",
+      "certificate": "Optional. Path to a downloadable PDF, e.g. \"assets/certificates/my-cert.pdf\". Renders a 'Get Certificate' button that opens the PDF."
+    },
+    "template": {
+      "title": "Course Name",
+      "issuer": "Provider",
+      "status": "Completed",
+      "year": "2026",
+      "url": "",
+      "certificate": "assets/certificates/my-cert.pdf"
+    }
+  },
+  "certifications": [
+    {
+      "title": "Machine Learning Specialization",
+      "issuer": "DeepLearning.AI & Stanford Online (Coursera)",
+      "status": "Completed",
+      "year": "2026",
+      "certificate": "assets/certificates/ml-specialization.pdf"
+    },
+    {
+      "title": "Google AI Professional Certificate",
+      "issuer": "Google (Coursera)",
+      "status": "Completed",
+      "year": "2026",
+      "certificate": "assets/certificates/google-ai-professional.pdf"
+    },
+    {
+      "title": "Learn Spring Boot in 100 Steps — Beginner to Expert",
+      "issuer": "Packt (Coursera)",
+      "status": "Completed",
+      "year": "2026",
+      "certificate": "assets/certificates/spring-boot-100-steps.pdf"
+    },
+    {
+      "title": "MERN Stack Web Development",
+      "issuer": "Udemy",
+      "status": "Completed",
+      "year": "2025",
+      "certificate": "assets/certificates/mern-stack-udemy.pdf"
+    },
+    {
+      "title": "Android App Development",
+      "issuer": "Udemy",
+      "status": "Completed",
+      "year": "2025",
+      "certificate": "assets/certificates/android-development.pdf"
+    }
+  ]
+}

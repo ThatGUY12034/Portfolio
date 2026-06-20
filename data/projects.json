@@ -1,0 +1,68 @@
+{
+  "_README": {
+    "how_to_add_a_project": "Copy one object from the 'projects' list below, paste it as a new entry, fill in the fields, then commit & push (Vercel auto-deploys). Newest projects look best at the top.",
+    "fields": {
+      "title": "Required. Project name.",
+      "desc": "Required. 1-2 sentence description of what it does.",
+      "tags": "Required. Array of tech/skills, e.g. [\"React\", \"Node.js\"].",
+      "code": "Optional. GitHub/source URL (must start with http). Omit or leave \"\" if none.",
+      "live": "Optional. Live deployment URL (must start with http). Omit or leave \"\" if none.",
+      "status": "Optional. Short badge text, e.g. \"Private / Coming Soon\" or \"In Progress\".",
+      "year": "Optional. Year string, e.g. \"2025\". Shown as a subtle label.",
+      "featured": "Optional. true to highlight the card (spans wider, accent border)."
+    },
+    "template": {
+      "title": "My New Project",
+      "desc": "Short description of what it does and the impact.",
+      "tags": ["Tech1", "Tech2"],
+      "code": "https://github.com/ThatGUY12034/your-repo",
+      "live": "https://your-deployment.vercel.app",
+      "year": "2026",
+      "featured": false
+    }
+  },
+  "projects": [
+    {
+      "title": "CtrlAI",
+      "desc": "Full-stack AI SaaS platform with user authentication and premium subscriptions — featuring AI-powered image processing, resume analysis, and community interaction, deployed on Vercel.",
+      "tags": ["ReactJS", "NodeJS", "Postgres", "AI Integration"],
+      "code": "https://github.com/ThatGUY12034/CtrlAI",
+      "live": "https://ctrl-ai-alpha.vercel.app/",
+      "year": "2026",
+      "featured": true
+    },
+    {
+      "title": "StreamWave",
+      "desc": "Full-stack music streaming platform with real-time audio streaming, authentication, and playlist management — built on a polyglot persistence layer (PostgreSQL for relational data, MongoDB for content metadata, Redis for caching).",
+      "tags": ["React", "Node.js", "PostgreSQL", "MongoDB", "Redis"],
+      "code": "https://github.com/ThatGUY12034/Spotify-clone",
+      "live": "https://spotify-clone-kappa-three.vercel.app/",
+      "year": "2026"
+    },
+    {
+      "title": "SpeakSign — ISL Translator",
+      "desc": "Real-time English-to-Indian Sign Language translator using Stanza NLP to reorder grammar (SVO → SOV) across an 800+ sign SiGML lexicon, rendered through a CWASA WebGL 3D avatar with voice-input support for accessibility.",
+      "tags": ["Python", "Flask", "Stanza NLP", "WebGL"],
+      "code": "https://github.com/ThatGUY12034/TEXT_TO_ISL",
+      "live": "https://huggingface.co/spaces/ThatGuy1204/Text_ISL",
+      "year": "2026",
+      "featured": true
+    },
+    {
+      "title": "IronMind",
+      "desc": "Native Android fitness tracker built with Jetpack Compose and Room (MVVM + Hilt dependency injection), with Gemini AI powering personalized workout and nutrition recommendations.",
+      "tags": ["Kotlin", "Jetpack Compose", "Room", "Hilt", "Gemini AI"],
+      "code": "https://github.com/ThatGUY12034/IronMind-",
+      "live": "https://iron-mind-brown.vercel.app/",
+      "year": "2026"
+    },
+    {
+      "title": "QChat",
+      "desc": "Real-time chat application with instant messaging, user authentication, and media sharing — built on the MERN stack with Socket.io for live updates.",
+      "tags": ["React", "Node.js", "MongoDB", "Socket.io"],
+      "code": "https://github.com/ThatGUY12034/QCHAT",
+      "live": "https://qchat12.vercel.app/",
+      "year": "2025"
+    }
+  ]
+}
